@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&display=swap');
+
+:root {
+    --cor-primaria: #a30000;
+    --cor-secundaria: #000000;
+    --cor-terciaria: #ffffff;
+    --font: "Anton SC", sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+
+body {
+    background-image: url('./assets/background.png');
+    height: 100vh;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--cor-primaria);
+}
+
+
+.cabecalho__menu {
+    display: flex;
+}
+
+.cabecalho__menu__icone {
+    width: 10%;
+}
+
+.cabecalho__titulo {
+    font-family: var(--font);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.5rem;
+    padding: 10px;
+}
+
+.principal {
+    display: flex;
+    flex-direction: column;
+}
+
+.principal__subtitulo {
+    font-family: var(--font);
+    text-align: center;
+    color: var(--cor-terciaria);
+}
+
+.principal__categorias {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff2d;
+    width: 80%;
+    height: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 0%;
+}
+
+.principal__categorias__links {
+    display: flex;
+}
+
+.principal__categorias__links__link{
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font);
+    font-size: 2.5rem;
+    color: var(--cor-terciaria);
+    text-align: center;
+    text-decoration: none;
+    align-items: center;
+}
+
+.principal__categorias__links__imagem {
+    width: 67%;
+}
+
+.principal__categorias__links__imagem:hover {
+    width: 57%;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+}
+
+@media (max-width: 956px) {
+    .cabecalho__titulo {
+        font-size: 1.25rem;        
+    }
+
+    .cabecalho__menu__icone {
+        width: 0%;
+    }
+
+    .cabecalho__menu__links__link {
+        font-size: 1rem;
+    }
+    .principal__categorias {
+        flex-direction: initial;
+    }
+
+    .principal__categorias__links {
+        flex-direction: column;
+    }
+
+    .principal__categorias__links__link {
+        font-size: 1rem;
+    }
+}
+
